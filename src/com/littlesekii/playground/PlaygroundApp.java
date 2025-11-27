@@ -1,15 +1,14 @@
 package com.littlesekii.playground;
 
-import com.littlesekii.playground.examples.methodChaining.MethodChainExample;
+import com.littlesekii.playground.examples.initializerBlock.InitializerBlockExample;
 
 public class PlaygroundApp {
     
     public static void main(String[] args) {
 
-        MethodChainExample chain = new MethodChainExample("Good morning sunshine!");
-        chain.print();
+        System.out.println(InitializerBlockExample.number);
 
-        chain.setMessage("Good night moonlight!").print();
+        System.out.println(new InitializerBlockExample().numberI);
 
     }
 }
