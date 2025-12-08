@@ -19,12 +19,14 @@ public class Main {
 
         Random random = new Random();
         CategoriaProduto[] categorias = CategoriaProduto.values();
+
+        // System.out.println(service.findAllByName("Produto 500 "));
         
         // Limpa arquivo antes
-        csvFile.clear();
-        
+        // service.clear();
+
         // INSERE 15k PRODUTOS COM VALORES ALEATÓRIOS
-        for (int i = 1; i <= 30000; i++) {
+        for (int i = 1; i <= 15000; i++) {
             CategoriaProduto categoriaAleatoria = categorias[random.nextInt(categorias.length)];
             int quantidadeAleatoria = random.nextInt(100) + 1; // 1-100
             double precoAleatorio = 10.0 + (random.nextDouble() * 990.0); // 10.0 - 1000.0
@@ -71,6 +73,7 @@ public class Main {
             .mapToDouble(p -> p.getPreco() * p.getQtdEstoque())
             .sum();
         System.out.printf("Valor total do inventário: R$ %.2f%n", valorTotal);
+
     }
     
 }
